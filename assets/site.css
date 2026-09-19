@@ -94,3 +94,6 @@ nav{height:72px}.brand-mark{border-radius:11px}.nav-links{gap:24px}.nav-links a{
 .trade-band figure{margin:0;border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#071a39}
 .trade-band img{display:block;width:100%;height:100%;min-height:300px;object-fit:cover}
 @media (max-width:900px){.trade-band{grid-template-columns:1fr;gap:14px;margin:20px 0 24px}.trade-band img{min-height:210px}}
+
+/* Small-screen headline scaling */
+@media(max-width:520px){.page-hero h1{font-size:33px;line-height:1.06}.pro-copy h1,.modern-page-hero h1,.about-hero h1{font-size:34px;line-height:1.08}.hero h1{font-size:36px;line-height:1.06}.page-hero p,.pro-copy p{font-size:15px;line-height:1.7}}
