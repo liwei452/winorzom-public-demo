@@ -1,0 +1,9 @@
+{
+  "name": "威诺智贸通 WINORZOM",
+  "short_name": "WINORZOM",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f6f9fe",
+  "theme_color": "#1768ff",
+  "icons": []
+}
