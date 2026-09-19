@@ -23,12 +23,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+
+      - name: Restore generated image assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets
+          if compgen -G "asset-src/*.b64" > /dev/null; then
+            for f in asset-src/*.b64; do
+              name="$(basename "$f" .b64)"
+              base64 -d "$f" > "assets/$name"
+            done
+          fi
+          rm -rf asset-src
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Upload static site
         uses: actions/upload-pages-artifact@v4
         with:
           path: '.'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
